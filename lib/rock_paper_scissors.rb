@@ -16,6 +16,7 @@ def rock_paper_scissors(player1, player2)
       case player1
         when "rock" then "It's a draw"
         when "paper" then "Player 1 wins"
+        when "scissors" then "Player 2 wins"
       end
   end
 end
