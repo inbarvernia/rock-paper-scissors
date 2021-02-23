@@ -24,9 +24,12 @@ describe "rock_paper_scissors" do
   it "Player 1 wins if plays scissors against paper" do
     expect(rock_paper_scissors("scissors", "paper")).to eq "Player 1 wins"
   end
-  
+
   it "Draw if both players play paper" do
     expect(rock_paper_scissors("paper", "paper")).to eq "It's a draw"
   end
 
+  it "Draw if both players play scissors" do
+    expect(rock_paper_scissors("scissors", "scissors")).to eq "It's a draw"
+  end
 end
