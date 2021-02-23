@@ -1,3 +1,6 @@
 def rock_paper_scissors(player1, player2)
-  return "Player 1 wins"
+  case player2
+    when "scissors" then "Player 1 wins"
+    when "paper" then "Player 2 wins"
+  end
 end
