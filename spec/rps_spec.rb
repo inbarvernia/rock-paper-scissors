@@ -17,4 +17,7 @@ describe "rock_paper_scissors" do
     expect(rock_paper_scissors("paper", "rock")).to eq "Player 1 wins"
   end
   
+  it "Player 2 wins if plays scissors against paper" do
+    expect(rock_paper_scissors("paper", "scissors")).to eq "Player 2 wins"
+  end
 end
