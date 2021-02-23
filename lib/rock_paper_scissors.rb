@@ -1,21 +1,14 @@
 def rock_paper_scissors(player1, player2)
-  case player2
-    when "scissors"
-      case player1
-        when "paper" then "Player 2 wins"
-        when "rock" then "Player 1 wins"
-        when "scissors" then "It's a draw"
-      end
-    when "paper"
-      case player1
-        when "rock" then "Player 2 wins"
-        when "scissors" then "Player 1 wins"
-        when "paper" then "It's a draw"
-      end
-    when "rock"
-      case player1
-        when "rock" then "It's a draw"
-        when "paper" then "Player 1 wins"
-      end
+  if player1 == player2
+    "It's a draw"
+  elsif (player1 == "rock" && player2 == "scissors") ||
+    (player1 == "scissors" && player2 == "paper") ||
+    (player1 == "paper" && player2 == "rock")
+      "Player 1 wins"
+  else
+    "Player 2 wins"
+    # This is based on the assumption that the only possible arguments to enter are "rock", "paper", or "scissors".
+    # To account for other possibilities (including typos), we could specify the conditions for player 2 winning
+    # in an additional elsif statement, and use the else statement for an error message.
   end
 end
